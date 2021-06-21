@@ -1,6 +1,12 @@
 #include <iostream>
 
+#include "pigment.h"
+#include "print_screen.h"
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << pigments::red("This is red!") << std::endl;
+    std::cout << pigments::green("This is green!") << std::endl;
+    print_screen::red("From print_screen::red");
+    print_screen::green("From print_screen::green");
     return 0;
 }
