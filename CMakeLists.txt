@@ -15,7 +15,15 @@ add_executable(Taller
         ${SOURCES}
         )
 
+set(TEST_SOURCES
+        test/src/pretty_print.cpp
+        test/src/test_pigment.cpp
+        )
+
 add_executable(Test
         test/main.cpp
         ${SOURCES}
+        ${TEST_SOURCES}
         )
+
+target_include_directories(Test PRIVATE test/include)
